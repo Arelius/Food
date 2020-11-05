@@ -1,0 +1,29 @@
+
+{{ define "main" }}
+
+{{ partial "hero.html" . }}
+
+<div class="section main">
+  <div class="row content">
+    <article>
+      {{ range first 20 ( .Site.RegularPages )}}
+      {{ if gt .ReadingTime 1 }}
+      {{ .Scratch.Set "readingTime" "minutes" }}
+      {{ else }}
+      {{ .Scratch.Set "readingTime" "minute" }}
+      {{ end }}
+      <h5>
+        <a href="{{.RelPermalink}}" class="category" alt="{{.Title}}" title="{{.Title}}">{{.Title}}</a>
+      </h5>
+      <div class="row">
+        <div class="six columns"><div class="u-pull-right"><i class="{{.Params.Icon}}"></i>
+        </div>
+        </div>
+      </div>
+    {{ end }}
+  </article>
+  </div>
+  <hr>
+</div>
+
+{{ end }}

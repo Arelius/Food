@@ -1,0 +1,24 @@
+baseURL = "http://food.nd.gl"
+languageCode = "en-us"
+title = "Indy's Recipes"
+theme = "hugo-sugoi"
+relativeURLS = true
+
+[params]
+  herotitle = "Recipes!!"
+  herolink = ":/recipes/"
+  herolinkText = "Yum"
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/scatteredray/"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/scatteredray/"
+
+  [[params.social]]
+    name = "instagram"
+    url = "https://www.instagram.com/indyndray/"
+
+[author]
+  name = "Indy Ray"
